@@ -89,11 +89,11 @@ section h3 {
   letter-spacing: 0.2px;
 }
 
-/* Bulleted list styling: keep bullets but refine spacing */
+/* List styling: hide default bullets and keep compact spacing */
 .activity-card .participants ul {
   margin: 0;
-  padding-left: 1.25rem; /* keep visible bullets */
-  list-style: disc;
+  padding-left: 0;
+  list-style: none; /* hide bullets */
 }
 
 /* Each participant row: avatar + name */
@@ -105,6 +105,32 @@ section h3 {
   color: #333;
   font-size: 14px;
   line-height: 1;
+  padding-right: 6px; /* room for delete button */
+}
+
+/* Participant name (keeps text and allows delete button to align to right) */
+.activity-card .participant-name {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Small delete button for participants */
+.delete-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete-participant:hover {
+  background-color: rgba(198, 40, 40, 0.08);
 }
 
 /* Circular avatar with initials */
